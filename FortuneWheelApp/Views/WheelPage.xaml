@@ -2,10 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.WheelPage"
-             Title="Fortune Wheel">
-    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-        <Label Text="Spin the Wheel!" FontSize="24" HorizontalOptions="Center" />
-        <Image x:Name="WheelImage" Source="wheel.png" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" />
-        <Button Text="Spin the Wheel" Clicked="OnSpinClicked" />
+             Title="Spin the Fortune Wheel"
+            BackgroundColor="LightYellow">
+
+    <VerticalStackLayout Padding="30" Spacing="20" HorizontalOptions="CenterAndExpand">
+        <!-- Изображение колеса фортуны (картинка будет вращаться) -->
+        <Image x:Name="WheelImage"
+               Source="wheel.png" 
+               WidthRequest="300" 
+               HeightRequest="300"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+        <!-- Кнопка для вращения колеса -->
+        <Button Text="Snip the Wheel"
+                BackgroundColor="MediumSeaGreen"
+                TextColor="White"
+                FontSize="20"
+                Clicked="OnSpinClicked"
+                HorizontalOptions="Center" />
+
+        <!-- Кнопка для перехода к описанию результата -->
+        <Button Text="Описание результата"
+                BackgroundColor="SlateBlue"
+                TextColor="White"
+                FontSize="20"
+                Clicked="OnDescriptionClicked"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                x:Name="DescriptionButton" />
+
+        <!-- Приветственное сообщение -->
+        <Label Text="Spin the Wheel and you will get a surprise letter"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <!-- Кнопка для перехода -->
+        <Button Text="Hint"
+                BackgroundColor="MediumPurple"
+                TextColor="White"
+                FontSize="20"
+                Clicked="OnDescriptionClicked"
+                HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

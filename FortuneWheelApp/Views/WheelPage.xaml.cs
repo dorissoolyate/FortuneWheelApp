@@ -28,4 +28,11 @@ public partial class WheelPage : ContentPage
         int randomIndex = _random.Next(_descriptions.Length);
         await Navigation.PushAsync(new DescriptionPage(_descriptions[randomIndex]));
     }
+
+    // Обработчик для кнопки "Описание"
+    private void OnDescriptionClicked(object sender, EventArgs e)
+    {
+        // Например, переход на другую страницу с описанием
+        DisplayAlert("Hint", "Snip the wheel :)", "OK");
+    }
 }

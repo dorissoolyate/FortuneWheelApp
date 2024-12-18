@@ -2,9 +2,24 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.WelcomePage"
-             Title="Welcome">
-    <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Welcome to the Fortune Wheel!" FontSize="24" HorizontalOptions="Center" />
-        <Button Text="Start" Clicked="OnStartClicked" />
+             Title="Fortune Wheel"
+             BackgroundColor="LightSkyBlue">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <!-- Приветственное сообщение -->
+        <Label Text="Welcome to Fortune Wheel!"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <!-- Кнопка для перехода -->
+        <Button Text="Start"
+                BackgroundColor="MediumPurple"
+                TextColor="White"
+                FontSize="20"
+                Clicked="OnStartClicked"
+                HorizontalOptions="Center" />
     </VerticalStackLayout>
+
 </ContentPage>

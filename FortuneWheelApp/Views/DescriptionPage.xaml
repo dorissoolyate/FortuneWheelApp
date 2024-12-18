@@ -2,17 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.DescriptionPage"
-             Title="Fortune Result">
+             Title="Fortune Result"
+                          BackgroundColor="LavenderBlush">
 
-
-    <VerticalStackLayout Padding="20">
-        <!-- Label для отображения описания -->
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <!-- Описание карты -->
         <Label x:Name="DescriptionLabel"
-               FontSize="20"
+               FontSize="22"
                HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+               VerticalOptions="CenterAndExpand"
+               TextColor="Black" />
 
-        <!-- Кнопка для возврата на колесо фортуны -->
-        <Button Text="Back to Wheel" Clicked="OnBackToWheelClicked" />
+        <!-- Кнопка для возврата -->
+        <Button Text="Назад"
+                BackgroundColor="Tomato"
+                TextColor="White"
+                FontSize="20"
+                Clicked="OnBackToWheelClicked"
+                HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

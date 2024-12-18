@@ -8,7 +8,7 @@ public partial class WheelPage : ContentPage
 {
     private Random _random;
     private string[] _descriptions = {
-        "Good Luck!", "Try Again", "You are a Winner!", "Keep Going!", "Success Awaits You", "Better Luck Next Time"
+        "A new adventure awaits!", "Good luck is on your side!", "The future is bright!", "Today is your lucky day!", "You are on the right path!", "Good luck is on your side!"
     };
 
     public WheelPage()
